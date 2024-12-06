@@ -1,0 +1,15 @@
+meta {
+  name: get environment by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/{{path}}/environments/d9bd4b95-6e19-45ad-0ae5-08dcf8ff86b6
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{local_token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get server by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_local_url}}/servers/bf32bd7a-8504-4d27-a07f-08dcf8ff864f
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{local_token}}
+}

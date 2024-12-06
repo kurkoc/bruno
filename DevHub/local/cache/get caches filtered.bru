@@ -1,0 +1,21 @@
+meta {
+  name: get caches filtered
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/{{path}}/filter
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "pageNo" : 1,
+      "pageSize" : 5,
+      "sortOrder" : 0,
+      "sortField" : "Id",
+      "filters" : {}
+  }
+}

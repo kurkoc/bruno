@@ -1,0 +1,20 @@
+meta {
+  name: remove environment databases
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{url}}/applications/databases/85a2815d-57dd-4bef-9446-08dcf35e7f6c
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "databaseId" : "b5f81835-f6f5-4f14-4f6e-08dcf27fa417",
+      "databaseName": "GeoDB",
+      "username": "sa",
+      "password": "1243sdg22!"
+  }
+}

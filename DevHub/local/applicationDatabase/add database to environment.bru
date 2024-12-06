@@ -1,0 +1,20 @@
+meta {
+  name: add database to environment
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/applications/D812D81D-8BFE-4612-3B24-08DCF3346BA7/databases
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "databaseId" : "b5f81835-f6f5-4f14-4f6e-08dcf27fa417",
+      "databaseName": "GeoDB",
+      "username": "sa",
+      "password": "1243sdg22!"
+  }
+}

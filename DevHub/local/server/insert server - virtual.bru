@@ -1,0 +1,30 @@
+meta {
+  name: insert server - virtual
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/{{path}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{local_token}}
+}
+
+body:json {
+  {
+      "typeId": 2,
+      "hostId":"ea544723-ebd5-4ee7-8ad9-08dce55f4753",
+      "virtualizationTypeId": 9,
+      "operatingSystemId" : 5,
+      "ipAddress": "172.20.30.102",
+      "macAddress":"00-1B-63-84-45-E6",
+      "cpu": "amd razor",
+      "ram":"32 gb",
+      "disk":"1 tb ssd",
+      "backupPolicy":"her gün gece saat 12'de incremental backup"
+  }
+}

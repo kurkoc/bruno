@@ -1,0 +1,21 @@
+meta {
+  name: insert database
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/{{path}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "serverId": "ea544723-ebd5-4ee7-8ad9-08dce55f4753",
+      "typeId" : 12,
+      "port" : 1433,
+      "version": "19",
+      "backupPolicy": "sample backup policy"
+  }
+}

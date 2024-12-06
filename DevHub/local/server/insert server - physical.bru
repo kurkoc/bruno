@@ -1,0 +1,29 @@
+meta {
+  name: insert server - physical
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/{{path}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{local_token}}
+}
+
+body:json {
+  {
+      "typeId": 1,
+      "operatingSystemId" : 4,
+      "ipAddress": "172.20.30.177",
+      "macAddress":"00-1B-63-84-46-E9",
+      "physicalLocation": "Veri Merkezi 1, Kabin C4, Raf 12",
+      "cpu": "amd razor",
+      "ram":"32 gb",
+      "disk":"1 tb ssd",
+      "backupPolicy":"her gün gece saat 12'de incremental backup"
+  }
+}

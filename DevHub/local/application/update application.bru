@@ -1,0 +1,22 @@
+meta {
+  name: update application
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{url}}/{{path}}/e7af63ac-9549-440b-135d-08dce3188b56
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{local_token}}
+}
+
+body:json {
+  {
+      "name" : "tedst",
+      "departmentId" : 2
+  }
+}
