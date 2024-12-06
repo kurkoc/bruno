@@ -7,14 +7,10 @@ meta {
 get {
   url: {{url}}/{{path}}/paged?pageNo=1&pageSize=10
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
   pageNo: 1
   pageSize: 10
-}
-
-auth:bearer {
-  token: {{local_token}}
 }

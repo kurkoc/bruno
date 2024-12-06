@@ -13,3 +13,7 @@ get {
 script:post-response {
   bru.setEnvVar('token',res.body.accessToken)
 }
+
+docs {
+  token alma endpointi. endpoint çalıştıktan sonra post-script çalıştırılır ve accessToken değeri otomatik olarak token collection variable'ına eklenir. Bu sayede token değerini elle kopyalamanıza gerek kalmaz.
+}
