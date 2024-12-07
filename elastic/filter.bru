@@ -1,0 +1,47 @@
+meta {
+  name: filter
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url}}/.ds-kibana_sample_data_logs-2024.12.07-000001/_search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "query": {
+      "bool": {
+        "filter": [
+          {
+            "term": {
+              "clientip": "223.87.60.27"
+            }
+          },
+          {
+            "term": {
+              "host": "artifacts.elastic.co"
+            }
+          },
+          {
+            "range": {
+              "bytes": {
+                "gte": 4000,
+                "lte": 8000
+              }
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "bytes": {
+          "order": "desc"
+        }
+      }
+    ]
+  }
+}

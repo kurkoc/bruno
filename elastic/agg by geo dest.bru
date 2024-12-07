@@ -1,0 +1,25 @@
+meta {
+  name: agg by geo dest
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/.ds-kibana_sample_data_logs-2024.12.07-000001/_search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "size": 0,
+    "aggs": {
+      "requests_by_country": {
+        "terms": {
+          "field": "geo.dest"
+        }
+      }
+    }
+  }
+  
+}

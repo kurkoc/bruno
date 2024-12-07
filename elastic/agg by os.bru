@@ -1,0 +1,25 @@
+meta {
+  name: agg by os
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{url}}/.ds-kibana_sample_data_logs-2024.12.07-000001/_search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "size": 0,
+    "aggs": {
+      "requests_by_os": {
+        "terms": {
+          "field": "machine.os.keyword"
+        }
+      }
+    }
+  }
+  
+}
